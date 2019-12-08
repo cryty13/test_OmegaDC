@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg navbar-light" id="barra" style="background-color: silver;">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.jpg" width="40" class="brand" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Bem vindo: {{email}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link alink" (click)="Logout()" routerLinkActive="active">Sair</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="conteudo">
+    <div class="row">
+        <!-- <div class="card" style="width: 80%;"> -->
+        <div class="col-md-12">
+            <div class="card cartw">
+                <div class="card-header" style="border: 2px solid #ccc!important;">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <table>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Data Criação</th>
+                                    <th>Ativo</th>
+                                </tr>
+                                <tr *ngFor="let key of ListaUser">
+                                    <td>{{key.name}}</td>
+                                    <td>{{key.email}}</td>
+                                    <td>{{key.dtCriacao |date:'dd/MM/yyyy'}}</td>
+                                    <td>{{key.ativo}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

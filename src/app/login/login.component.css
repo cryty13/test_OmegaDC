@@ -1,0 +1,29 @@
+.cartw{
+    /* width: 50%;
+    margin-left: 23%;
+    margin-top: 4%;
+    background: none;
+    border: none !important; */
+
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 4%;
+    background: none;
+    border: none !important;
+} 
+ .conteudo {
+    margin-top: 5em;
+}
+
+.btnLogin{
+    margin-left: 2.7em;
+}
+.novo{
+    margin: 2em 0em 0em 8em;
+}
+.btnLoginCadastro{
+    margin-left: 1.6em;
+}
+.novoCadastro{
+    margin: 2em 0em 0em 10em;
+}

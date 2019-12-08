@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+<div class="conteudo">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card cartw">
+                <div class="card-header" style="border: 2px solid #ccc!important;">
+                    <div class="row text-center">
+                        <div class="col-11">
+                            <label style="margin-left: 2em;">Omega Digital Center</label>
+                        </div>
+                    </div>
+                    <div class="card-body" *ngIf="!cadastro">
+                        <form [formGroup]="form">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <label for="validationCustom03">Email</label>
+                                    <input type="text" class="form-control" formControlName="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <label for="validationCustom03">Senha</label>
+                                    <input type="password" class="form-control" formControlName="Password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-2 btnLogin">
+                                    <button type="button" [disabled]="!form.valid" (click)="Login()"
+                                        class="btn btn-primary">Entrar</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="novo">
+                                    <a (click)="Novo(true)" class="alink">Crie uma conta</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-body" *ngIf="cadastro">
+                        <form [formGroup]="formCadastro">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <label for="validationCustom03">Nome</label>
+                                    <input type="text" class="form-control" formControlName="Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <label for="validationCustom03">Email</label>
+                                    <input type="text" class="form-control" formControlName="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <label for="validationCustom03">Senha</label>
+                                    <input type="password" class="form-control" formControlName="Password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-2 btnLoginCadastro">
+                                    <button type="button" [disabled]="!formCadastro.valid" (click)="CreateUser()"
+                                        class="btn btn-primary">Cadastrar</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="novoCadastro">
+                                    <a (click)="Novo(false)" class="alink">Voltar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
